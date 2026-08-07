@@ -1,0 +1,19 @@
+body {
+    background-color: azure;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
