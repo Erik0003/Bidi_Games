@@ -85,6 +85,40 @@ function draw() {
 // SPAWN DE INIMIGO
 function spawnEnemy() {
     const x = Math.floor(Math.random() * (cols - 3)) + 1;
+
+    // Mapa de ocupação das colunas
+    let occupied = Array(cols).fill(false);
+
+    //Marcar colunas ocupadas pelos inimigos atuais
+    enemies.forEach(enemy => {
+        for (let i = -1; i <= 1; i++) {
+            occupied[enemy.x + i] = true;
+        }
+    });
+
+    // Marcar colunas qie seriam ocupadas pelo novo inimigo
+    let newOccupied = [...occupied];
+    for (let i = -1; i <= 1; i++) {
+        newOccupied[x + i] = true;
+    }
+
+    // Verificar se existe um corredor de 3 colunas livres
+    let hasCorridor = false;
+    for (let start = 1; start <= cols - 3; start++) {
+        if (
+            !newOccupied[start] && 
+            !newOccupied[start + 1] && 
+            !newOccupied[start + 2]
+        ) {
+            hasCorridor = true;
+            break;
+        }
+    }
+
+    // Se não houver corredor, não spawnar
+    if (!hasCorridor) return;
+
+    // Spawn permitido
     enemies.push({
         x: x,
         y: 0,
