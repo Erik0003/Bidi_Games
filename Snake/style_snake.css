@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h1 {
     text-align: center;
 }
@@ -8,4 +9,16 @@ h2 {
 
 p {
     text-align: center;
+=======
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+>>>>>>> 9fa43ca7c348b5c51eb6311f26b17aa1f68ba0e1
 }
