@@ -1,5 +1,6 @@
 body {
-    background-color: azure;
+    background-color: black;
+    color: red;
 }
 
 h1 {
@@ -16,4 +17,12 @@ h2 {
 
 p {
     text-align: center;
+}
+
+#jogos {
+    color: rgb(12, 120, 236);
+}
+
+#jogos:hover {
+    color: red;
 }
